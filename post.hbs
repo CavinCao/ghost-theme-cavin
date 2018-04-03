@@ -29,8 +29,11 @@
                     </span>
                     <span class="post-meta-item">
                         <i class="fa fa-clock-o"></i>
-                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="ture"}}</time>
-                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">({{date format="YYYY-MM-DD"}})</time>
+                        <!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="ture"}}</time>-->
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time>
+                    </span>
+                    <span class="post-meta-item" id="busuanzi_container_page_pv">
+                        被围观<span id="busuanzi_value_page_pv"></span>次
                     </span>
                     <span class="post-meta-item post-meta-tags">
                         <i class="fa fa-tag"></i>
@@ -51,6 +54,8 @@
             </footer>
         </article>
 
+        {{> "reward"}}
+        
         <aside class="post-nav">
             {{#prev_post}}
             <span class="post-nav-prev">
