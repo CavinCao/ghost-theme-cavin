@@ -4,22 +4,24 @@
     <div class="widget-profile-header">
         <a class="widget-profile-logo" href="{{@blog.url}}">
             {{#if @blog.logo}}
-                <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
-            {{else}}
-                <img src="{{asset "img/user-image.png"}}" alt="{{@blog.title}}" />
-            {{/if}}
+            <img src="{{@blog.logo}}" alt="{{@blog.title}}" /> {{else}}
+            <img src="{{asset " img/user-image.png "}}" alt="{{@blog.title}}" /> {{/if}}
         </a>
     </div>
     <span class="widget-profile-title label label-xlg label-minty arrowed-in arrowed-in-right">{{@blog.title}}</span>
     <hr>
     <p class="widget-profile-desc">
-        {{#if @blog.description}}
-            {{@blog.description}}
-        {{else}}
-            <em><a href="{{@blog.url}}/ghost/settings/general/">(添加站点描述)</a></em>
+        {{#if @blog.description}} {{@blog.description}} {{else}}
+        <em>
+            <a href="{{@blog.url}}/ghost/settings/general/">(添加站点描述)</a>
+        </em>
         {{/if}}
     </p>
-    <hr><div style=" text-align:center"><img src="/content/images/2018/02/qrcode_for_gh_cac1ef8c9733_258.jpg" alt="欢迎关注我的公众号" /></div>
+    <hr>
+    <div style=" text-align:center">
+        <img style=" margin-right:60px" src="http://image.bug2048.com/erweima.jpg?imageView2/1/w/100/h/100/q/75" alt="欢迎关注我的公众号"/>
+        <img src="http://image.bug2048.com/xiaochengxu.jpg?imageView2/1/w/100/h/100/q/75" alt="欢迎关注我的公众号" />
+    </div>
     <hr> {{> "site_stat"}}
     <hr> {{> "social"}}
 </div>

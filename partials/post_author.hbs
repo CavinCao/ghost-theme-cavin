@@ -1,29 +1,28 @@
-{{! Everything inside the #author tags pulls data from the author }}
-{{#author}}
-{{#if profile_image}}
+{{! Everything inside the #author tags pulls data from the author }} {{#author}} {{#if profile_image}}
 <figure class="author-image">
-    <a class="img" href="{{url}}" style="background-image: url({{img_url profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
+    <a class="img" href="{{url}}" style="background-image: url({{img_url profile_image}})">
+        <span class="hidden">{{name}}'s Picture</span>
+    </a>
 </figure>
-{{/if}}
-{{/author}}
+{{/if}} {{/author}}
 <figure class="author-info">
     <section class="author-info-title">
-        <span><time class="post-date pull-right" datetime="{{date format='YYYY-MM-DD'}}">发表于：{{date format="YYYY-MM-DD"}}</time></span>
+        <span>
+            <time class="post-date pull-right" datetime="{{date format='YYYY-MM-DD'}}">发表于：{{date format="YYYY-MM-DD"}}</time>
+        </span>
         {{#author}}
         <span>作者：{{name}}</span>
     </section>
     <section class="author-info-content">
-        {{#if bio}}
-            <span class="author-info-bio">{{bio}}</span>
-        {{else}}
-            <p>查看此作者的 <a href="{{url}}">更多文章</a> 。</p>
-        {{/if}}
+        <div style=" text-align:center">
+            <span class="author-info-bio">欢迎关注我的微信公众号和博客小程序</span>
+        </div>
         <section class="author-info-social">
-            {{#if website}}<a href="{{website}}" class="author-info-social-website">我的站点</a>{{/if}}
-            <a href="{{url}}" class="author-info-social-feature">我的专栏</a>
-            <a href="https://www.weibo.com/2683516107" class="author-info-social-weibo">新浪微博</a>
-            <a href="https://github.com/CavinCao" class="author-info-social-github">GitHub</a>
-            <a href="https://segmentfault.com/u/bugshenghuo2048" class="author-info-social-sf">SegmentFault</a>
+            <div style=" text-align:center">
+                <img style=" margin-right:60px" src="http://image.bug2048.com/erweima.jpg?imageView2/1/w/100/h/100/q/75" alt="欢迎关注我的公众号"
+                />
+                <img src="http://image.bug2048.com/xiaochengxu.jpg?imageView2/1/w/100/h/100/q/75" alt="欢迎关注我的公众号" />
+            </div>
         </section>
         {{/author}}
     </section>
